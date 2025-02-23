@@ -5,25 +5,162 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shu-han Chuang | Portfolio</title>
   <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
-<body class="scroll-container">
-    <section class="section" id="home">
-      <h2>Home</h2>
-    </section>
-  
-    <section class="section" id="about">
-      <h2>About Me</h2>
-    </section>
-  
-    <section class="section" id="projects">
-      <h2>Projects</h2>
-    </section> 
+<body>
+    <div class="cursor"></div>
+    <nav class="navbar">
+        <div class="logo"><img src="image/logo.png" alt="Shu-han logo"></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="section" id="home">
+            <div class="hero-content">
+                <h1>Shu-han Chuang</h1>
+                <div class="scroll-arrows">
+                    <a href="#about" class="arrow-link">
+                        <span class="arrow"></span>
+                        <span class="arrow"></span>
+                        <span class="arrow"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section" id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="image/profile.png" alt="Shu-han Chuang">
+                    </div>
+                    <div class="about-text">
+                        <p>I'm a passionate developer with a love for art! I'm deeply interested in UI/UX design and also enjoy full-stack development. ✨</p>
+                        <br>
+                        <div class="skills">
+                            <h3>Technical Skills</h3>
+                            <div class="skill-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                                <span>phpMyAdmin</span>
+                                <span>sql</span>
+                                <span>Python</span>
+                            </div>
+                            <br>
+                            <h3>Languages</h3>
+                            <div class="language-skills">
+                                <div class="language-item">
+                                    <span class="language">Mandarin Chinese</span>
+                                    <span class="level native">Native</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language">English & French</span>
+                                    <span class="level">C2</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language">Spanish & Japanese</span>
+                                    <span class="level">B1</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-nav">
+                <a href="#" class="nav-arrow left">
+                    <span class="arrow-nav left"></span>
+                </a>
+                <a href="#" class="nav-arrow right">
+                    <span class="arrow-nav right"></span>
+                </a>
+            </div>
+        </section>
+        
+        <!-- <section class="section" id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="assets/images/project1.jpg" alt="Project 1">
+                        <h3>Project Title 1</h3>
+                        <p>Project description goes here. Explain the key features and technologies used.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn">Live Demo</a>
+                            <a href="#" class="btn">GitHub</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                      <img src="assets/images/project1.jpg" alt="Project 1">
+                      <h3>Project Title 1</h3>
+                      <p>Project description goes here. Explain the key features and technologies used.</p>
+                      <div class="project-links">
+                          <a href="#" class="btn">Live Demo</a>
+                          <a href="#" class="btn">GitHub</a>
+                      </div>
+                  </div>
 
-  <footer>
-    <p>&copy; 2025 Shu-han Chuang. All rights reserved.</p>
-  </footer>
+                  
 
-  <script src="script/script.js"></script>
+                </div>
+            </div>
+            <div class="section-nav">
+                <a href="#" class="nav-arrow left">
+                    <span class="arrow-nav left"></span>
+                </a>
+                <a href="#" class="nav-arrow right">
+                    <span class="arrow-nav right"></span>
+                </a>
+            </div>
+        </section> -->
+        
+        <section class="section" id="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <br>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:shuhan.chuang0@gmail.com">shuhan.chuang0@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/shu-hanc/" target="_blank">LinkedIn</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/kuaix2" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    <div class="contact-logo">
+                        <img src="image/logo.png" alt="Shu-han logo">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-nav">
+                <a href="#" class="nav-arrow left">
+                    <span class="arrow-nav left"></span>
+                </a>
+                <a href="#" class="nav-arrow right">
+                    <span class="arrow-nav right"></span>
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Shu-han Chuang. All rights reserved.</p>
+    </footer>
+
+    <script src="script/script.js"></script>
 </body>
-
 </html>

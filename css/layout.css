@@ -1,0 +1,348 @@
+:root {
+    --main-color: #6b5e4a;
+    --accent-color: #c8b99c;
+    --background-color: #f7f6f2;
+    --font-main: 'Georgia', serif;
+    --font-secondary: 'Arial', sans-serif;
+    --elegant-green: #4a5d4f;
+    --hover-timing: 0.3s ease;
+    --cursor-size: 20px;
+    --cursor-border: 3px;
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(10px); /* Apply blur effect to the background */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%); /* This will hide the navbar */
+}
+
+
+.logo {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: var(--font-main);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Section styles */
+.section {
+    width: 100vw; /* Each section takes full viewport width */
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../image/background.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Add a subtle overlay to ensure text readability */
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(247, 246, 242, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* About section */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(107, 94, 74, 0.2);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.about-text {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 1px solid var(--accent-color);
+}
+
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-tags span {
+    background-color: var(--accent-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--main-color);
+    font-family: var(--font-main);
+}
+
+/* Projects section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--accent-color);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    padding: 1rem;
+    color: var(--main-color);
+    font-size: 1.4rem;
+    font-family: var(--font-main);
+}
+
+.project-card p {
+    padding: 0 1rem 1rem;
+}
+
+/* Contact section */
+#contact {
+    background-color: var(--elegant-green);
+    color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact h2 {
+    color: var(--background-color);
+}
+
+#contact h2::after {
+    background-color: var(--accent-color);
+}
+
+.contact-content {
+    margin-top: 0;
+    padding: 2rem;
+    position: relative;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact .container {
+    margin-top: -50px;
+}
+
+.contact-logo {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.contact-logo img {
+    width: 100%;
+    height: auto;
+}
+
+.contact-info {
+    padding-right: 350px;
+    padding-left: 50px;
+}
+
+.contact-item {
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-item:last-child {
+    margin-bottom: 0;
+}
+
+.contact-item a {
+    color: var(--background-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: var(--font-main);
+}
+
+.contact-item a:hover {
+    color: var(--accent-color);
+}
+
+.contact-item i {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--elegant-green);
+    color: var(--background-color);
+    font-family: var(--font-secondary);
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--elegant-green) 0%, #3d4940 100%);
+    z-index: -1;
+}
+
+/* Section headers */
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+/* Language skills styles */
+.language-skills {
+    margin-top: 1rem;
+}
+
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    font-family: var(--font-main);
+}
+
+.language {
+    color: var(--main-color);
+}
+
+.level {
+    color: var(--elegant-green);
+    font-weight: 500;
+}
+
+.level.native {
+    color: var(--main-color);
+}
+
+.on-dark-section {
+    color: #f7f6f2; /* Change text color */
+}
+
+.on-dark-section a {
+    color: #f7f6f2; /* Change link color */
+}
+
+/* Update logo styles for dark section */
+.navbar.on-dark-section .logo img {
+    filter: brightness(0) invert(1); /* Makes logo white */
+}

@@ -1,0 +1,102 @@
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0.5rem;
+    font-family: var(--font-main);
+}
+
+.primary-btn {
+    background-color: var(--main-color);
+    color: var(--background-color);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: var(--main-color); /* Set your desired color */
+    border: 2px solid transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+    z-index: 9999;
+}
+
+/* When hovering over clickable elements */
+.cursor.hover {
+    transform: scale(3);
+}
+
+
+/* Special styling for contact section */
+#contact .cursor {
+    border-color: var(--background-color);
+}
+
+/* Update sparkle styles */
+.about-image::before,
+.about-image::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: url('../image/sparkle.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    filter: brightness(0) invert(1);
+}
+
+/* Position first sparkle - top left */
+.about-image::before {
+    top: 15%;
+    left: 25%;
+    transform: none;
+}
+
+/* Position second sparkle - bottom right */
+.about-image::after {
+    bottom: 15%;
+    right: 25%;
+    transform: none;
+}
+
+/* Show sparkles on hover */
+.about-image:hover::before,
+.about-image:hover::after {
+    opacity: 1;
+}
+
+/* Add keyframes for ascending animation */
+@keyframes ascend {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Update hero heading styles */
+.hero-content h1 {
+    font-family: 'Andrew Elegant', var(--font-main);
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    letter-spacing: 2px;
+    animation: ascend 1.5s ease-out forwards;
+    font-weight: 300;
+}
+

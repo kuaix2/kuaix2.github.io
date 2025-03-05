@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Andrew Elegant';
+    src: url('../fonts/ANDREW ELEGANT Regular.ttf') format('truetype');
+}
+
+/* Reset and base styles */
+:root {
+    --main-color: #6b5e4a;
+    --accent-color: #c8b99c;
+    --background-color: #f7f6f2;
+    --font-main: 'Georgia', serif;
+    --font-secondary: 'Arial', sans-serif;
+    --elegant-green: #4a5d4f;
+    --hover-timing: 0.3s ease;
+    --cursor-size: 20px;
+    --cursor-border: 3px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    color: var(--main-color);
+    background-color: var(--background-color);
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+h1, h2, h3 {
+    font-family: var(--font-main);
+    color: var(--main-color);
+}

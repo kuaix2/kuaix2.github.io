@@ -1,0 +1,133 @@
+/* Responsive design for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .section {
+        padding: 4rem 1rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .contact-logo {
+        width: 200px;
+        right: 1rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .contact-item i {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Add media query for smaller screens */
+@media (max-width: 768px) {
+    .contact-logo {
+        display: none; /* Hide the logo on smaller screens */
+    }
+}
+
+
+
+
+/* Responsive design for very small devices */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .contact-logo {
+        width: 150px;
+        right: 1rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .contact-item i {
+        margin-bottom: 0.5rem;
+    }
+}

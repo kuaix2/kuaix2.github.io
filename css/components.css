@@ -19,6 +19,22 @@
     color: var(--main-color);
 }
 
+/* Button styles */
+.git-btn {
+    background-color: var(--main-color); /* Brown background */
+    color: var(--background-color); /* White text */
+    border-radius: 20px; /* Rounded edges */
+    padding: 0.5rem 1rem;
+    text-align: center; /* Center text */
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--font-main);
+}
+
+.git-btn:hover {
+    background-color: var(--accent-color); /* Change background on hover */
+}
+
 .cursor {
     position: fixed;
     width: 10px;

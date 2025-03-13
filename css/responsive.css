@@ -80,10 +80,9 @@
 /* Add media query for smaller screens */
 @media (max-width: 768px) {
     .contact-logo {
-        display: none; /* Hide the logo on smaller screens */
+        display: none; 
     }
 }
-
 
 
 

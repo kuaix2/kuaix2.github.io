@@ -16,7 +16,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    backdrop-filter: blur(10px); /* Apply blur effect to the background */
+    backdrop-filter: blur(10px); 
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -27,26 +27,33 @@
 }
 
 .navbar.hidden {
-    transform: translateY(-100%); /* This will hide the navbar */
+    transform: translateY(-100%);
 }
-
 
 .logo {
     height: 70px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    user-select: none;  
+    transition: filter 0.3s ease-in-out;
 }
 
 .logo img {
     height: 100%;
     width: auto;
     object-fit: contain;
+    pointer-events: none;  
+}
+
+.logo:hover {
+    filter: brightness(0) invert(1);
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center; 
 }
 
 .nav-links a {
@@ -55,18 +62,38 @@
     font-weight: 500;
     transition: color 0.3s ease;
     font-family: var(--font-main);
+    padding: 0.5rem 0.5rem;
 }
 
 .nav-links a:hover {
     color: var(--accent-color);
 }
 
+/* Specific styles for the CV button */
+.nav-links .cv-btn {
+    background-color: var(--main-color); 
+    color: var(--background-color); 
+    padding: 0.5rem 1rem; 
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    font-weight: 500;
+    font-family: var(--font-main);
+    align-self: center; 
+}
+
+.nav-links .cv-btn:hover {
+    background-color: var(--accent-color); 
+    color: var(--main-color); 
+}
+
 /* Section styles */
 .section {
-    width: 100vw; /* Each section takes full viewport width */
+    width: 100vw; 
     min-height: 100vh;
     padding: 6rem 2rem 2rem;
-    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-x: hidden; 
 }
 
 .container {
@@ -84,7 +111,7 @@
     position: relative;
 }
 
-/* Add a subtle overlay to ensure text readability */
+
 #home::before {
     content: '';
     position: absolute;
@@ -102,7 +129,7 @@
     z-index: 2;
 }
 
-/* About section */
+/* About me! */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
